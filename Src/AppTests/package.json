@@ -4,9 +4,10 @@
   "description": "",
   "main": "UnitTesting.js",
   "scripts": {
+    
     "test": "jest"
   },
-  "author": "",
+  "author": "Aylin Ibryamov",
   "license": "ISC",
   "devDependencies": {
     "jest": "^27.5.1"

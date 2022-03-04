@@ -1,4 +1,4 @@
-const UnitTest = require('../App/FibonacciSequence.js');
+const UnitTest = require('../App/FibonacciSequence');
 
 
 test('This number should be positive ', () => {
