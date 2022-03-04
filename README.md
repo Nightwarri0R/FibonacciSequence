@@ -9,4 +9,4 @@ How to run this program on linux.
 2. Open a terminal and enter this "node FibonacciSequence.js".
 How to run tests. 
 1. Go to UnitTests follder
-2. Open a terminal in this folder and run "npm tests"
+2. Open a terminal in this folder and run "npm test"
