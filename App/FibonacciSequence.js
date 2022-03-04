@@ -1,49 +1,34 @@
-var randomNumber;
 var number1 = 0;
 var number2 = 1;
+var randomNumber;
 var nextNumber;
 var fibSequence = [];
 
-// Function to generate randome number to determine how long the sequence to be
+/// Function to generate random number between 1 and 30 to determine how long the sequence to be
 function RandomNumberGen() {
 
-    randomNumber = Math.floor(Math.random() * 1000),
-        console.log("This is the random number generated: " + randomNumber);
-
+    randomNumber = Math.floor(Math.random() * 30) + 1;
 }
-
 
 // Function to actually create the Fibonacci Sequence based on the random number and it prints them out
 function FibonnaciSequence(randomNumber) {
 
-    console.log("Fibonacci Sequence:");
-    console.log(number1);
-    console.log(number2);
-
+    console.log("Fibonacci Sequence based on the random number of :" + randomNumber);
     fibSequence.push(number1);
     fibSequence.push(number2);
-    fibSequence.push(number1 + number2);
-    
-    nextNumber = number1 + number2;
+    console.log(fibSequence[0]);
 
-    do {
-        console.log(nextNumber);
-        number1 = number2;
-        number2 = nextNumber;
-        nextNumber = number1 + number2;
-    } while (nextNumber <= randomNumber);
+    console.log(fibSequence[1]);
 
-    fibSequence.forEach(element => {
-        console.log("" + fibSequence[element])
-    });
    
+    for (nextNumber = 2; nextNumber <= randomNumber; nextNumber++) {
+        fibSequence[nextNumber] = fibSequence[nextNumber - 2] + fibSequence[nextNumber - 1];
+        console.log(fibSequence[nextNumber]);
+    }
 }
-const randomNum = {
+const tests = {
     add: () => randomNumber,
-    addNum1: () => number1,
-    addNum2: () => number2,
-    addNumNext: () => nextNumber
-
+    sequence: ()=> fibSequence
 
 }
 
@@ -51,7 +36,5 @@ RandomNumberGen();
 FibonnaciSequence(randomNumber);
 
 
+module.exports = tests;
 
-
-module.exports = randomNum;
-//module.exports = FibSequence;

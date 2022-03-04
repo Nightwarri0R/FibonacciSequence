@@ -1,13 +1,20 @@
-const randomNum = require('../App/FibonacciSequence.js');
+const tests = require('../App/FibonacciSequence.js');
 
 
 test('This number should be positive ', () => {
 
-    expect(randomNum.add()).toBeLessThan(1000);
-    expect(randomNum.add()).toBeGreaterThanOrEqual(1);
+    expect(tests.add()).toBeLessThan(31);
+    expect(tests.add()).toBeGreaterThanOrEqual(1);
 });
-test('This number should be positive ', () => {    
-    expect((randomNum.addNum1())).toBeGreaterThanOrEqual(1);
-    expect((randomNum.addNumNext())).toBeLessThan(1000);
-    //expect(functions.add()).toBeGreaterThanOrEqual(1);
+//Test function thhat tests that array imported from the javascript file is all correct by comparing it to two identicall instances arrays of Fibonacci sequence
+test('This is the Fibonacci Sequence numbers ', () => {    
+    const fibTest = tests.sequence(); 
+    const arrayTest = tests.sequence();
+
+   expect(fibTest[0]).toBe(0);
+   arrayTest.forEach(element  => {
+       expect(fibTest[element]).toBe(arrayTest[element]);
+       console.log(element)
+   });
+   
 });
