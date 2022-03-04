@@ -17,18 +17,17 @@ function FibonnaciSequence(randomNumber) {
     fibSequence.push(number1);
     fibSequence.push(number2);
     console.log(fibSequence[0]);
-
     console.log(fibSequence[1]);
 
-   
+
     for (nextNumber = 2; nextNumber <= randomNumber; nextNumber++) {
         fibSequence[nextNumber] = fibSequence[nextNumber - 2] + fibSequence[nextNumber - 1];
         console.log(fibSequence[nextNumber]);
     }
 }
-const tests = {
+const UnitTest= {
     add: () => randomNumber,
-    sequence: ()=> fibSequence
+    sequence: () => fibSequence
 
 }
 
@@ -36,5 +35,5 @@ RandomNumberGen();
 FibonnaciSequence(randomNumber);
 
 
-module.exports = tests;
+module.exports = UnitTest;
 
