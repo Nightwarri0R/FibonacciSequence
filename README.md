@@ -10,4 +10,4 @@ How to run this program on linux.
 How to run tests. 
 1. Go to AppTests follder
 2. Open a terminal in this folder and run "npm test"#
-3. If you dont have node_modules and jest installed just run this command in the test follder terminal "npm install --save-dev jest"
+3. If you dont have node_modules and jest installed just run this command in the test folder terminal "npm install --save-dev jest"
